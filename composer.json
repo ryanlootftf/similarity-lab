@@ -1,0 +1,19 @@
+{
+    "name": "ryan-loo/similarity-lab",
+    "description": "Self-contained multilingual semantic duplicate-detection prototype: static embeddings + cosine similarity in plain PHP (no FFI, no external AI API).",
+    "type": "project",
+    "require": {
+        "php": "^8.3",
+        "ext-pdo_sqlite": "*",
+        "ext-mbstring": "*",
+        "ext-intl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lab\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

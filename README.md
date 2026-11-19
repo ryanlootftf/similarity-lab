@@ -35,7 +35,6 @@ Benchmark on 87 realistic posts across English, Malay and Chinese (`bin/compare.
 | Cross-language top-1 | 91.7% |
 | AUC vs all other posts | 0.996 |
 | Best F1 (threshold 0.38) | 0.877 (precision 0.89, recall 0.86) |
-| False-alarm rate | 5.6% |
 | Per-post embed | ~0.17 ms |
 | Model on disk | 54 MB |
 

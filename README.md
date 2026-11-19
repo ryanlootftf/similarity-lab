@@ -26,17 +26,23 @@ run on cheap shared hosting (cPanel, PHP-FPM) at posting time.
 
 ## Results
 
-Benchmark on 87 realistic posts across English, Malay and Chinese (`bin/compare.php`):
+Benchmark on 87 realistic posts across English, Malay and Chinese (`bin/compare.php`).
 
-| Metric | Value |
-|---|---|
-| Top-1 duplicate found | **93.1%** |
-| Top-3 | 100% |
-| Cross-language top-1 | 91.7% |
-| AUC vs all other posts | 0.996 |
-| Best F1 (threshold 0.38) | 0.877 (precision 0.89, recall 0.86) |
-| Per-post embed | ~0.17 ms |
-| Model on disk | 54 MB |
+In plain terms: when someone submits a post, the system's **#1 suggestion is the true
+duplicate 93.1% of the time**, and the correct answer is always within its **top 3**. It
+keeps working across languages (91.7%), draws a near-perfect line between "duplicate" and
+"unrelated" (AUC 0.996), and is fast (0.17 ms) and small (54 MB) enough to run live on
+cheap shared hosting.
+
+| Metric | Value | What it means |
+|---|---|---|
+| Top-1 duplicate found | **93.1%** | How often the #1 match is the correct duplicate. |
+| Top-3 | 100% | The correct duplicate always ranks within the top 3 matches. |
+| Cross-language top-1 | 91.7% | Still finds the duplicate when the new post is in a different language. |
+| AUC vs all other posts | 0.996 | How well the score separates duplicates from unrelated posts (1.0 = perfect, 0.5 = coin flip). |
+| Best F1 (threshold 0.38) | 0.877 | Best balance between finding all duplicates (recall 0.86) and not flagging false ones (precision 0.89). |
+| Per-post embed | ~0.17 ms | Time to turn one post into a vector — negligible. |
+| Model on disk | 54 MB | Storage footprint of the trimmed embedding model. |
 
 ## Requirements
 

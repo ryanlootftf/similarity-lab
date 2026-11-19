@@ -26,13 +26,7 @@ run on cheap shared hosting (cPanel, PHP-FPM) at posting time.
 
 ## Results
 
-Benchmark on 87 realistic posts across English, Malay and Chinese (`bin/compare.php`).
-
-In plain terms: when someone submits a post, the system's **#1 suggestion is the true
-duplicate 93.1% of the time**, and the correct answer is always within its **top 3**. It
-keeps working across languages (91.7%), draws a near-perfect line between "duplicate" and
-"unrelated" (AUC 0.996), and is fast (0.17 ms) and small (54 MB) enough to run live on
-cheap shared hosting.
+Benchmark on 87 realistic posts across English, Malay and Chinese (`bin/compare.php`):
 
 | Metric | Value | What it means |
 |---|---|---|

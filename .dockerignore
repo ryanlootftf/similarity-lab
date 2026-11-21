@@ -1,0 +1,11 @@
+.git/
+vendor/
+similarity-lab/
+storage/models/
+storage/lab.sqlite
+storage/stats.json
+storage/static/multilingual-256-f32/
+storage/static/potion-base-32M/
+storage/static/potion-base-8M/
+storage/static/static-similarity-mrl-multilingual-v1/
+bench/results.json

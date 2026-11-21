@@ -7,6 +7,8 @@ Given a new post, it embeds the text with a local static embedding model and fin
 most-similar existing posts by cosine similarity, so a "someone already posted this" check can
 run on cheap shared hosting (cPanel, PHP-FPM) at posting time.
 
+![Similarity Lab demo](similar.png)
+
 ## How it works
 
 1. **Static embeddings.** A `sentence-transformers/static-similarity-mrl-multilingual-v1`
